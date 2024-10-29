@@ -1,14 +1,14 @@
 export let empleados = [
     {
-        usuario: "admin",
-        contrasena: "1234",
+        userName: "admin",
+        password: "1234",
     },
     {
-        usuario: 'jaimeZapata',
-        contrasena: '123',
+        userName: 'jaimeZapata',
+        password: '123',
     },
     {
-        usuario: 'yeris',
-        contrasena: '1010',
+        userName: 'yeris',
+        password: '1010',
     }
 ]

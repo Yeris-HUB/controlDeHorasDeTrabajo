@@ -1,23 +1,24 @@
+import { buscarEmpleados } from "../../../controller/controllerUsuarios.js";
+let btnIniciar = document.querySelector('#btnIniciar');
+let intentos = 0
+let maxIntentos = 3
 
-function iniciarSesion() {
-    let username = document.getElementById('userName').value;
-    let password = document.getElementById('password').value;
+if (btnIniciar) {
+    btnIniciar.addEventListener('click', iniciarSesion);
+    function iniciarSesion() {
+        if (buscarEmpleados()) {
+            alert("Inicio de sesión exitoso.")
+            window.location.href = '/view/pages/conversionHoras.html'
+        } else {
+            intentos++;
+            let intentosRestantes = maxIntentos - intentos;
 
-    if (userName === usuarioCorrecto && password === contraseñaCorrecta) {
-        alert("Inicio de sesión exitoso.");
-        document.getElementById('loginSection').classList.add('hidden');
-        document.getElementById('workSection').classList.remove('hidden');
-    } else {
-        intentos--;
-        alert(`Usuario o contraseña incorrectos. Intentos restantes: ${intentos}`);
-        if (intentos === 0) {
-            alert("Número máximo de intentos alcanzado. El sistema se cerrará.");
-            window.close(); // Esto solo funcionará en algunas configuraciones del navegador.
+            if (intentos < maxIntentos) {
+                alert(`Error de credenciales.Te quedan ${intentosRestantes} intentos.`)
+            } else {
+                alert("Has alcanzado el máximo de intentos.\nReinicia la Pagina")
+                btnIniciar.disabled = true
+            }
         }
     }
-}
-
-function btnIniciar(){
-    let usuario = document.getElementById('usuario').value
-    let contraseña = document.getElementById('contraseña').value
 }
