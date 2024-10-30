@@ -7,19 +7,34 @@
     <link rel="stylesheet" href="../public/css/home.css">
 </head>
 <body>
-    <div class="container">
+    <!-- <div class="container">
         <h1>Control de Horas de Trabajo</h1>
         <form id="salario1">
-            <label for="totalHoras">Horas Trabajadas:</label>
-            <input type="number" id="totalHoras" name="horas" min="0" required>
-            <label for="totalHoras">Total De Horas:</label>
-            <input type="number" id="totalHoras" name="horas" min="0" required readonly style="outline: none;">
-            <button type="button" onclick="calcularSalario()">Calcular Horas</button>
-            <button type="button" onclick="limpiarFormulario()">limpiar Formulario</button>
+            <label for="nombre">Nombre Del Empleado:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Escribe el nombre del empleado" required>
+            <label for="horasTrabajadas">Horas Trabajadas:</label>
+            <input type="number" id="horasTrabajadas" name="horas" min="0" required>
+            <button type="button" onclick="agregarEmpleado()">Agregar Empleado</button>
+            <button type="button" onclick="limpiarFormulario()">Limpiar Formulario</button>
         </form>
         <div id="resultado"></div>
     </div>
-
-    <script type="module" src="../../view/public/js/script.js"></script>
+    
+    <div class="contenedor">
+        <h1>Calculadora de Salarios</h1>
+        <table id="tablaSalarios" border="1">
+            <thead>
+                <tr>
+                    <th>Empleado</th>
+                    <th>Horas Trabajadas</th>
+                    <th>Salario Calculado</th>
+                </tr>
+            </thead>
+            <tbody id="resultados"></tbody>
+        </table>
+        <h3>Total Acumulado de Salarios: <span id="totalSalarios">$0</span></h3>
+        <button onclick="calcularSalarios()">Calcular Salario</button>
+    </div> -->
+    <script src="../../view/public/js/controlHoras.js"></script>
 </body>
 </html>

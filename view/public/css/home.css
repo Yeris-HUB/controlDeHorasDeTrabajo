@@ -7,10 +7,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #fceffa;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
+    flex-direction: column;
+    align-items: center; 
+    min-height: 100vh; 
+    padding: 50px; 
 }
 
 .container {
@@ -20,17 +20,25 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 700px;
     text-align: center;
+    margin-bottom: 70px; /* Espacio entre el formulario y la calculadora */
 }
 
 input[type="number"] {
-    width: 80%;
+    width: 80% ;
     padding: 8px;
     margin-top: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 10px;
 }
-
+input[type="text"] {
+    width: 75% ;
+    padding: 8px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
 button {
     padding: 10px 15px;
     background-color: #7d8a8b;
@@ -48,4 +56,22 @@ button:hover {
     margin-top: 15px;
     color: #333;
     font-size: 1.1rem;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se coloquen en columna */
+    background-color: #b73fbb;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.contenedor {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    text-align: center;
+    margin-bottom: 20px; /* Agrega espacio entre las secciones */
 }
